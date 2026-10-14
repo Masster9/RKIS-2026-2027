@@ -24,13 +24,19 @@ class Program
             Console.Write("> ");
             string input = Console.ReadLine();
 
-            if (input == "exit")
+            if (input == "help")
+            {
+                Console.WriteLine("Доступные команды:");
+                Console.WriteLine("  help    - список команд");
+                Console.WriteLine("  exit    - выход из программы");
+            }
+            else if (input == "exit")
             {
                 break;
             }
             else
             {
-                Console.WriteLine("Неизвестная команда");
+                Console.WriteLine("Неизвестная команда. Введите help, чтобы увидеть список команд");
             }
         }
     }
