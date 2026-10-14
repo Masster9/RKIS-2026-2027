@@ -33,6 +33,7 @@ class Program
                 Console.WriteLine("  help    - список команд");
                 Console.WriteLine("  profile - данные пользователя");
                 Console.WriteLine("  add \"текст задачи\" - добавить задачу");
+                Console.WriteLine("  view    - показать все задачи");
                 Console.WriteLine("  exit    - выход из программы");
             }
             else if (command == "profile")
@@ -57,6 +58,17 @@ class Program
                 todos[count] = text;
                 count++;
                 Console.WriteLine($"Задача добавлена: {text}");
+            }
+            else if (command == "view")
+            {
+                Console.WriteLine("Задачи:");
+                foreach (string todo in todos)
+                {
+                    if (!string.IsNullOrEmpty(todo))
+                    {
+                        Console.WriteLine($"  {todo}");
+                    }
+                }
             }
             else if (command == "exit")
             {
