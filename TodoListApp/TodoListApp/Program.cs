@@ -16,5 +16,22 @@ class Program
         int age = DateTime.Now.Year - birthYear;
 
         Console.WriteLine($"Добавлен пользователь {firstName} {lastName}, возраст - {age}");
+
+        string[] todos = new string[2];
+
+        while (true)
+        {
+            Console.Write("> ");
+            string input = Console.ReadLine();
+
+            if (input == "exit")
+            {
+                break;
+            }
+            else
+            {
+                Console.WriteLine("Неизвестная команда");
+            }
+        }
     }
 }
