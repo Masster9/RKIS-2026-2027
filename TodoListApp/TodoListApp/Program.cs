@@ -28,7 +28,12 @@ class Program
             {
                 Console.WriteLine("Доступные команды:");
                 Console.WriteLine("  help    - список команд");
+                Console.WriteLine("  profile - данные пользователя");
                 Console.WriteLine("  exit    - выход из программы");
+            }
+            else if (input == "profile")
+            {
+                Console.WriteLine($"{firstName} {lastName}, {birthYear}");
             }
             else if (input == "exit")
             {
