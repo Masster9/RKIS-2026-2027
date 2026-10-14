@@ -50,8 +50,12 @@ class Program
 
                 if (count == todos.Length)
                 {
-                    Console.WriteLine("Список задач заполнен");
-                    continue;
+                    string[] newTodos = new string[todos.Length * 2];
+                    for (int i = 0; i < todos.Length; i++)
+                    {
+                        newTodos[i] = todos[i];
+                    }
+                    todos = newTodos;
                 }
 
                 string text = parts[1].Trim('"');
